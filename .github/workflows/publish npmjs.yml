@@ -16,6 +16,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - name: publish
         run: npm publish --access public
-        working-directory: Package
+        working-directory: contoh123Package
         env:
-          Package: ${{secrets.npm_token}}
+          contoh123Package: ${{secrets.npm_token}}
