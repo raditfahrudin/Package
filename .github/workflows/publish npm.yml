@@ -1,28 +1,21 @@
-name: publis npm
+name: "publish npm"
+
 on: push
   
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16
-      - run: npm ci
-      - run: npm test
-
-  publish-npm:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: checkout
+        uses: actions/checkout@v3
+      - name: node
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm publish
+      - name: publish
+        run: npm publish --access public
+        working-directory: Package
         env:
-          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          Package: ${{secrets.npm_token}}
