@@ -1,5 +1,5 @@
 {
-  "name": "contoh123package",
+  "name": "@raditfahrudin/package",
   "version": "1.0.0",
   "description": "ini hanya contoh package",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raditfahrudin/contoh123.git"
+    "url": "git+https://github.com/raditfahrudin/package.git"
   },
   "keywords": [
     "contoh"
@@ -17,9 +17,9 @@
   "author": "raditfahrudin",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/raditfahrudin/contoh123/issues"
+    "url": "https://github.com/raditfahrudin/package/issues"
   },
-  "homepage": "https://github.com/raditfahrudin/contoh123#readme",
+  "homepage": "https://github.com/raditfahrudin/package#readme",
   "dependencies": {
     "chalk": "^5.2.0"
   }
